@@ -24,15 +24,15 @@
         remote_src: yes
 
     - name: Copy roboshop configuration
-       ansible.builtin.copy:
-         src: roboshop.conf
-         dest: /etc/nginx/default.d/roboshop.conf
+      ansible.builtin.copy:
+        src: roboshop.conf
+        dest: /etc/nginx/default.d/roboshop.conf
 
     - name: start Nginx service
-       ansible.builtin.systemd:
-         state: restarted
-         name: nginx
-         enabled: true         
+      ansible.builtin.systemd:
+        state: restarted
+        name: nginx
+        enabled: true         
 
 
 
