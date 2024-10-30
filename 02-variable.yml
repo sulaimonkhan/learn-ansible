@@ -3,7 +3,7 @@
   connection: local
   vars:
     URL: vars.google.com
-    tasks:
-      - name: Print URL
-        ansible.builtin.debug:
-          msg: URL - {{ URL }}
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL - {{ URL }}
