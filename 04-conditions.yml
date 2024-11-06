@@ -11,3 +11,14 @@
       ansible.builtin.debug:
         msg: Ubuntu
       when: os == "ubuntu"  
+
+      - name: Get remainder
+        ansible.builtin.shell: echo $(({{number}}%2))
+        register: remainder
+
+      - name: Print Even Number
+        ansible.builtin.debug:
+          msg: Number {{ number }}is even
+        when: remainder.stdout == "0"
+              
+
