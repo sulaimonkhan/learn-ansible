@@ -38,6 +38,7 @@
 - name: Demo on register Variables
   hosts: local host
   connection: local
+  become: yes
   tasks:
     - name: Check package 
       ansible.builtin.dnf:
