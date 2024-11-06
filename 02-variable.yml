@@ -47,7 +47,7 @@
       ansible.builtin.dnf:
         name: zlib
         state: installed  
-        register: out      
+      register: out      
 
     - name: Print out
       ansible.builtin.debug:
