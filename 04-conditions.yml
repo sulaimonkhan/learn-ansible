@@ -5,8 +5,9 @@
     - name: Print OS Redhat
       ansible.builtin.debug:
         msg: Redhat
+      when: os == "redhat"  
 
     - name: Print OS Ubuntu
       ansible.builtin.debug:
         msg: Ubuntu
-            
+      when: os == "ubuntu"  
