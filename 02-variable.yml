@@ -25,7 +25,29 @@
   hosts: localhost 
   connection: local
   roles:
-    - sample               
+    - sample  
+
+## NOTE:- Precedence
+    #1. CLI
+    #2. Tasks
+    #3. Roles- vars
+    #4. playbook - play vars
+    #5. Roles - defaults
+
+
+- name: Demo on register Variables
+  hosts: local host
+  connection: local
+  tasks:
+    - name: Check package 
+      ansible.builtin.dnf:
+        name: zlib
+        state: installed
+        register: out
+
+
+    
+    
 
 
 
