@@ -34,15 +34,7 @@
     #4. playbook - play vars
     #5. Roles - defaults
 
- # -  name: Demo on register Variables
-  #  hosts: local host
-   # connection: local
-    # become: yes
-    #tasks:
-     # - name: Check package 
-      #  ansible.builtin.dnf:
-       #     name: zlib
-        #    state: installed
+ 
 
 
 
@@ -55,6 +47,10 @@
       ansible.builtin.dnf:
         name: zlib
         state: installed        
+
+    - name: Print out
+      ansible.builtin.debug:
+        msg: "{{ out }}"    
         
 
 
