@@ -52,7 +52,25 @@
     - name: Print out
       ansible.builtin.debug:
         msg: "{{ out }}"    
-        
+
+
+# V ariable Data types
+# 1. String
+#2.Number         
+#3. boolean  
+#  
+#  
+#  variable types
+#  1.Plan
+#  url: example.com
+#  2.List
+#  urls: 
+#    - example.com
+#    - test.com
+#  3.map
+#  example:example.com
+#  test: test.com
+
 
 
     
