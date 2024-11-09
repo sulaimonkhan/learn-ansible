@@ -3,7 +3,7 @@
   connection: local
   tasks:
     - name: install zlib
-      ansible.builtin.dnf: ls
+      ansible.builtin.shell: ls
 
   handlers:
   - name: Say Hello
