@@ -4,6 +4,8 @@
   tasks:
     - name: install zlib
       ansible.builtin.shell: ls
+      notify:
+        - Say Hello
 
   handlers:
   - name: Say Hello
