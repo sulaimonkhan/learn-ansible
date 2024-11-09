@@ -1,0 +1,8 @@
+- name: Handlers
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: install zlib
+      ansible.builtin.dnf:
+        name: zlib
+        state: installed
